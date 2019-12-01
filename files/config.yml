@@ -1,0 +1,24 @@
+# JudgementDay © Property of Valiant Gaming LLC.
+# General Configuration File - DO NOT TAMPER!
+
+general:
+
+ # Formatting of messages is as follows:
+ prefix: '&4&lJudgement&f&lDay &8» '
+ primaryColour: '&c'
+ secondaryColour: '&f'
+ tertiaryColour: '&b&n'
+ 
+ # Ban thresholds and criteria pertaining to inclusion in banwaves
+ # if a player meets any one of these conditions they will be included in the banwaves
+ behaviourScore: 25
+ violationCount: 10
+ punishmentCount: 5
+ 
+ # Actions taken upon execution
+ banCommand: 'judgeban {player} Banned during Judgement Day.'
+ furtherSanctions:
+ - 'ci {player}'
+ 
+ # Permission to execute JudgementDay
+ permNode: 'valiant.owner'
