@@ -1,0 +1,12 @@
+# JudgementDay © Property of Valiant Gaming LLC.
+# Message Configuration File - DO NOT TAMPER!
+
+messages:
+
+ # Help Page
+ helpPage:
+ - '{prefix} &fHelp Page'
+ - ' '
+ - '&8> &7/jd init &8- &cInitiate Judgement Day'
+ - '&8> &7/jd history &8- &cView previous banwaves'
+ - '&8> &7/jd next &8- &cNext Judgement Day'
