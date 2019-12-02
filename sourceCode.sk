@@ -1,0 +1,25 @@
+# JudgementDay © Property of Valiant Gaming LLC.
+# Version 1.0.0 Pre-release
+#-----------------------------------------------------------------
+
+# FUNCTIONS
+
+function createJDConfig(t: text):
+	if {_t} is "general":
+		file "plugins/JudgementDay/config.yml" doesn't exist:
+			download file from "https://github.com/Ares-IO/JudgementDay/raw/master/files/config.yml" to file "plugins/JudgementDay/config.yml"
+			send "&4&lJudgement&f&lDay &8» &cDownloaded the default configuration file from &fGithub&c." to console
+		file "plugins/JudgementDay/messages.yml" doesn't exist:
+			download file from "https://github.com/Ares-IO/JudgementDay/raw/master/files/messages.yml" to file "plugins/JudgementDay/messages.yml"
+			send "&4&lJudgement&f&lDay &8» &cDownloaded the default messages file from &fGithub&c." to console
+			
+function createJDDataFile(p: player):
+	file "plugins/JudgementDay/userdata/%{_p}%.yml" doesn't exist:
+		download file from "https://github.com/Ares-IO/JudgementDay/raw/master/files/datatemplate.yml" to file "plugins/JudgementDay/userdata/%{_p}.yml"
+		send "&4&lJudgement&f&lDay &8» &cCreated the data file for &f%{_p}%" to console
+			
+on script load:
+	createJDConfig("general")
+	
+on join:
+	createJDDataFile("%player%")
